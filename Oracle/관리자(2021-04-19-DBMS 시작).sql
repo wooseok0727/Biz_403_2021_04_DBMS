@@ -72,4 +72,6 @@ DEFAULT TABLESPACE mydb;
 -- 아무런 권한도 부여되지 않은 상태이다.
 -- 심지어 접속(login) 자체가 되지 않는다.
 
+GRANT DBA TO user1;
+
 
