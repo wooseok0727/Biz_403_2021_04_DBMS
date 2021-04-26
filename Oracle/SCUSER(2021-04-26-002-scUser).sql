@@ -88,3 +88,5 @@ FROM tbl_score;
  GROUP BY sc_subject
  ORDER BY sc_subject;
  
+ SELECT * FROM tbl_score_v2;
+ 
