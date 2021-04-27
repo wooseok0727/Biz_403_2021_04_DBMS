@@ -86,6 +86,7 @@ SELECT TRUNC(150/60) || '분' || MOD(150,60) || '초'
 FROM DUAL;
 
 -- 11을 2로 나눈 나머지가 1이면 홀수, 아니면 짝수라고 표현
+-- 오라클에서 SELECT절 안에 IF사용 불가 CASE 사용
 SELECT 
     CASE WHEN MOD(11,2) = 1 THEN '홀수'
     ELSE '짝수'
