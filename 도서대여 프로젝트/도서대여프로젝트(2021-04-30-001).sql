@@ -73,6 +73,9 @@ SELECT * FROM view_도서정보;
 DELETE FROM tbl_books;
 COMMIT;
 
+DROP VIEW view_도서정보;
+
+
 
 
 

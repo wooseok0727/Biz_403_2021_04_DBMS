@@ -46,9 +46,15 @@ REFERENCES tbl_author(au_code);
 DELETE FROM tbl_author
 WHERE au_code = 'A0001';
 
--- 도서정보 추가 하면 오류가 뜬다 fk설정때문에
+DELETE FROM tbl_books
+WHERE bk_acode = 'A0001';
+
+
+
+-- fk로 설정된 칼럼의 코드가 부모테이블 없는데 book 테이블에 바로 추가하려면 
+-- 오류가 발생
 INSERT INTO tbl_books(bk_isbn, bk_title, bk_acode, bk_ccode)
-VALUES ('970001','테스트','A0034','C0001');
+VALUES ('970003','테스트','A0035','C0101');
 
 /*
 =======================================================
