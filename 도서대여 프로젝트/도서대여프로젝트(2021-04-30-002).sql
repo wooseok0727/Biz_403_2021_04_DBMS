@@ -72,6 +72,9 @@ VALUES ('970003','테스트','A0035','C0101');
 ALTER TABLE tbl_books
 DROP CONSTRAINT fk_author;
 
+ALTER TABLE tbl_books
+DROP CONSTRAINT fk_company;
+
 DELETE FROM tbl_author
 WHERE au_code = 'A0001';
 
@@ -103,3 +106,9 @@ ADD CONSTRAINT fk_author
 FOREIGN KEY(bk_acode)
 REFERENCES tbl_author(au_code)
 ON DELETE CASCADE;
+
+--------------------------------------------------------------------
+
+DROP TABLE tbl_books;
+DROP TABLE tbl_author;
+DROP TABLE tbl_company;
