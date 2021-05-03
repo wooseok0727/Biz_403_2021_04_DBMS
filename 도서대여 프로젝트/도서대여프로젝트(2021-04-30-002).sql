@@ -112,3 +112,7 @@ ON DELETE CASCADE;
 DROP TABLE tbl_books;
 DROP TABLE tbl_author;
 DROP TABLE tbl_company;
+
+
+DELETE FROM tbl_books
+WHERE bk_title = '오라클';
