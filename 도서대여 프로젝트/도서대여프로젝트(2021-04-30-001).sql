@@ -75,6 +75,9 @@ COMMIT;
 
 DROP VIEW view_도서정보;
 
+DROP TABLE tbl_author;
+DROP TABLE tbl_books;
+DROP TABLE tbl_company;
 
 
 
