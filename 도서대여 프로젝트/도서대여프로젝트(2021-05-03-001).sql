@@ -336,3 +336,7 @@ FROM view_도서대여정보
 WHERE 대여일 < '2021-04-25' AND 반납일 IS NULL
 GROUP BY 대여일, 회원코드, 회원명, 회원연락처, 도서명
 ORDER BY 회원코드;
+
+
+DELETE FROM tbl_book_rent
+WHERE br_price = 1000;
