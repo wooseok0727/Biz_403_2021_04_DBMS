@@ -1,7 +1,7 @@
 -- gbUser 접속 화면
 USE GuestBook;
 DROP TABLE tbl_guest_book;
-CREATE TABLE tbl_guest_botbl_guest_bookok (
+CREATE TABLE tbl_guest_book (
 	gb_seq		BIGINT			AUTO_INCREMENT	PRIMARY KEY,
 	gb_date		VARCHAR(10)		NOT NULL,	
 	gb_time		VARCHAR(10)		NOT NULL,	
