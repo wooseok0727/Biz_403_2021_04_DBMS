@@ -28,3 +28,19 @@ CREATE TABLE tbl_author (
 	au_addr		VARCHAR(125),		
 	au_genre	VARCHAR(30)		
 );
+
+CREATE TABLE tbl_member (
+	username	VARCHAR(20)		PRIMARY KEY,
+	password	VARCHAR(20)		NOT NULL,	
+	name		VARCHAR(50)		NOT NULL,	
+	nname		VARCHAR(10)		NOT NULL,	
+	email		VARCHAR(50)		NOT NULL,	
+	tel			VARCHAR(20),		
+	addr		VARCHAR(125)
+);
+DROP TABLE tbl_member;
+
+
+SELECT * FROM tbl_member;
+INSERT INTO tbl_member (username,password,name,nname,email)
+VALUES ("aaaa","1234","홍길동","홍길동","www@naver.com");
