@@ -21,7 +21,10 @@ CREATE TABLE tbl_score (
 ALTER TABLE tbl_score
 ADD CONSTRAINT fk_student
 FOREIGN KEY(sc_stnum)
-REFERENCES tbl_student(st_num);
+REFERENCES tbl_student(st_num) ON DELETE CASCADE;
+
+ALTER TABLE tbl_score
+DROP FOREIGN KEY fk_student;
 
 ALTER TABLE tbl_student
 ADD UNIQUE (st_name, st_dept,st_tel);
@@ -36,7 +39,10 @@ INSERT INTO tbl_student (st_num, st_name,st_dept,st_grade,st_tel,st_addr)
 VALUES ("20210002","홍길동","컴퓨터공학",2,"010-666-5555","서울특별시");
 
 INSERT INTO tbl_student (st_num, st_name,st_dept,st_grade,st_tel,st_addr)
-VALUES (20210003,"홍길동","컴퓨터공학",2,"010-655-5555","서울특별시");
+VALUES ("20210003","홍길동","컴퓨터공학",2,"010-655-5555","서울특별시");
+
+INSERT INTO tbl_student (st_num, st_name,st_dept,st_grade,st_tel,st_addr)
+VALUES ("20210005","최길동","컴퓨터공학",2,"010-655-5555","서울특별시");
 
 INSERT INTO tbl_score (sc_seq,sc_stnum,sc_subject,sc_score)
 VALUES ("0000001","20210001","수학",80);
@@ -57,9 +63,9 @@ CREATE VIEW view_학생성적정보 AS
            COUNT(SC.sc_subject) AS sc_subject,
 		   SUM(SC.sc_score) AS sc_scores,
            ROUND(AVG(SC.sc_score),1) AS sc_avg
-    FROM tbl_score AS SC
-		LEFT JOIN tbl_student AS ST
-			ON SC.sc_stnum = ST.st_num
+    FROM tbl_student AS ST
+		LEFT OUTER JOIN tbl_score AS SC
+			ON ST.st_num = SC.sc_stnum
 	GROUP BY ST.st_num
 );    
 SELECT * FROM view_학생성적정보;
