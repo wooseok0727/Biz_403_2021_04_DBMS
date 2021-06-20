@@ -69,6 +69,20 @@ CREATE VIEW view_학생성적정보 AS
 	GROUP BY ST.st_num
 );    
 SELECT * FROM view_학생성적정보;
-
-
 DROP VIEW view_학생성적정보;
+
+CREATE VIEW view_성적일람표 AS
+(
+SELECT ST.st_num AS st_num,
+	   ST.st_name AS st_name,
+       SUM(IF(SC.sc_subject = '국어', SC.sc_score, 0)) AS sc_kor,
+       SUM(IF(SC.sc_subject = '영어', SC.sc_score, 0)) AS sc_eng,
+       SUM(IF(SC.sc_subject = '수학', SC.sc_score, 0)) AS sc_math,
+       SUM(IF(SC.sc_subject = '과학', SC.sc_score, 0)) AS sc_sci,
+       SUM(SC.sc_score) AS sc_scores,
+       ROUND(AVG(SC.sc_score),1) AS sc_avg
+FROM tbl_student AS ST
+	LEFT OUTER JOIN tbl_score AS SC
+		ON ST.st_num = SC.sc_stnum
+GROUP BY ST.st_num
+);
