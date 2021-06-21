@@ -44,3 +44,11 @@ DROP TABLE tbl_member;
 SELECT * FROM tbl_member;
 INSERT INTO tbl_member (username,password,name,nname,email)
 VALUES ("aaaa","1234","홍길동","홍길동","www@naver.com");
+
+SELECT * FROM tbl_author;
+SELECT * FROM tbl_company;
+
+DELETE FROM tbl_company
+WHERE cp_code = 'C1002';
+
+SELECT * FROM tbl_books;
