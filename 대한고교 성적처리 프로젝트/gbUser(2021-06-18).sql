@@ -32,6 +32,9 @@ ADD UNIQUE (st_name, st_dept,st_tel);
 SELECT * FROM tbl_student;
 SELECT * FROM tbl_score;
 
+DELETE FROM tbl_score
+WHERE sc_seq = 00000004;
+
 INSERT INTO tbl_student (st_num, st_name,st_dept,st_grade,st_tel,st_addr)
 VALUES ("20210001","홍길동","컴퓨터공학",2,"010-555-5555","서울특별시");
 
