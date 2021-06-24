@@ -14,6 +14,8 @@ CREATE TABLE tbl_student (
 INSERT INTO tbl_student(st_num, st_name, st_dept, st_grade, st_tel, st_addr)
 VALUES('20210001','홍길동','컴퓨터공학',3,'010-111-1234',"서울특별시");
 
+DROP TABLE tbl_student;
+
 SELECT * FROM tbl_student;
 
 CREATE TABLE tbl_score (
@@ -22,6 +24,7 @@ CREATE TABLE tbl_score (
 	sc_sbcode	CHAR(4)		NOT NULL,	
 	sc_score	INT			NOT NULL	
 );
+SELECT * FROM tbl_score;
 
 INSERT INTO tbl_score(sc_stnum, sc_sbcode, sc_score)
 VALUES('20210001','S001',90);
@@ -53,3 +56,14 @@ VALUES('S005','과학','박문수');
 
 DROP TABLE tbl_subject;
 SELECT * FROM tbl_subject;
+
+DELETE FROM tbl_subject
+WHERE sb_code = '과목코드';
+
+SELECT * FROM tbl_scoretbl_studentst_num;
+INSERT INTO tbl_score(sc_stnum, sc_sbcode,sc_score)
+VALUES('20210001','S001',100);
+INSERT INTO tbl_score(sc_stnum, sc_sbcode,sc_score)
+VALUES('20210001','S002',90);
+
+DESC tbl_student;
