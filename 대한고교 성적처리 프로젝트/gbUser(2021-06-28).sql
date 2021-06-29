@@ -59,11 +59,11 @@ CREATE TABLE tbl_score (
 
 
 INSERT INTO tbl_score (sc_stnum, sc_sbcode, sc_score)
-VALUES('2021001','S001',90);
+VALUES('20210001','S001',90);
 INSERT INTO tbl_score (sc_stnum, sc_sbcode, sc_score)
-VALUES('2021001','S002',90);
+VALUES('20210001','S002',90);
 INSERT INTO tbl_score (sc_stnum, sc_sbcode, sc_score)
-VALUES('2021001','S003',90);
+VALUES('20210001','S003',90);
 SELECT * FROm tbl_score;
 
 CREATE TABLE tbl_subject (
@@ -103,10 +103,13 @@ VALUES
 -- BULK INSERT
 INSERT INTO tbl_score(sc_stnum, sc_sbcode, sc_score)
 VALUES
-('2021002','S001',90),
-('2021002','S002',70),
-('2021002','S003',80),
-('2021002','S004',50),
-('2021002','S005',88);
+('20210002','S001',90),
+('20210002','S002',70),
+('20210002','S003',80),
+('20210002','S004',50),
+('20210002','S005',88);
+
+DELETE FROM tbl_score
+WHERE sc_stnum = '2021002';
 
 SELECT * FROM tbl_score;
