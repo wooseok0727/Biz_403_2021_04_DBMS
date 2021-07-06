@@ -25,3 +25,8 @@ SHOW TABLES;
 DROP TABLE tbl_files;
 
 SELECT * FROM tbl_gallery;
+
+-- 현재 연결된 session에서 INSERT가 수행되고
+-- 그 과정에서 AUTO_INCREMENT 컬럼이 변화가 있으면
+-- 그 값을 알려주는 함수
+SELECT LAST_INSERT_ID();
