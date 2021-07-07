@@ -65,6 +65,14 @@ SELECT * FROM tbl_user;
 SELECT * FROM tbl_like;
 
 
+UPDATE tbl_writing 
+SET wr_like_count = wr_like_count + 1
+WHERE wr_seq = 1;
+
+UPDATE tbl_writing
+SET wr_like_count = wr_like_count - 1
+WHERE wr_seq = 1;
+
 SELECT * 
 FROM tbl_writing
 	LEFT JOIN tbl_like
