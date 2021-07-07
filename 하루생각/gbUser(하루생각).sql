@@ -57,10 +57,23 @@ CREATE TABLE tbl_like (
 	li_date		TIMESTAMP DEFAULT NOW()		
 );
 
+INSERT INTO tbl_like (li_wr_seq,li_fan)
+VALUES(8,2);
+
 SELECT * FROM tbl_writing;
 SELECT * FROM tbl_user;
-DELETE FROM tbl_user 
-WHERE u_seq = 1;
+SELECT * FROM tbl_like;
+
+
+SELECT * 
+FROM tbl_writing
+	LEFT JOIN tbl_like
+		ON wr_seq = li_wr_seq
+	LEFT JOIN tbl_user
+		ON u_seq = li_fan
+WHERE u_seq = 2
+ORDER BY wr_last_date DESC;
+
 
 SELECT * FROM tbl_writing
 ORDER BY RAND() LIMIT 1;
