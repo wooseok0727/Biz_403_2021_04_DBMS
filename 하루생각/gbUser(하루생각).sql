@@ -9,7 +9,9 @@ CREATE TABLE tbl_user (
 	u_pw	VARCHAR(125)	NOT NULL,	
 	u_nick	VARCHAR(125)	NOT NULL	UNIQUE,
 	u_mail	VARCHAR(125)	NOT NULL	UNIQUE,
-	u_warning	INT		
+	u_warning	INT,
+	u_ban INT,
+    u_level INT
 );
 
 INSERT INTO tbl_user(u_id,u_pw,u_nick,u_mail)
@@ -64,6 +66,8 @@ SELECT * FROM tbl_writing;
 SELECT * FROM tbl_user;
 SELECT * FROM tbl_like;
 
+SELECT count(*) FROM tbl_like
+WHERE li_wr_seq = 3 and li_fan = null;
 
 UPDATE tbl_writing 
 SET wr_like_count = wr_like_count + 1
