@@ -59,6 +59,12 @@ CREATE TABLE tbl_like (
 	li_date		TIMESTAMP DEFAULT NOW()		
 );
 
+SELECT li_fan 
+FROM tbl_writing
+	LEFT JOIN tbl_like
+		ON wr_seq = li_wr_seq;
+
+
 INSERT INTO tbl_like (li_wr_seq,li_fan)
 VALUES(8,2);
 
