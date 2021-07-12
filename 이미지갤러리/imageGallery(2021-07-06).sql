@@ -26,6 +26,7 @@ DROP TABLE tbl_files;
 
 SELECT * FROM tbl_gallery;
 SELECT * FROM tbl_files;
+SELECT COUNT(*) FROM tbl_gallery;
 
 -- 현재 연결된 session에서 INSERT가 수행되고
 -- 그 과정에서 AUTO_INCREMENT 컬럼이 변화가 있으면

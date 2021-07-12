@@ -26,6 +26,9 @@ VALUES('korea2','12345','김길동','abc2@gmail.com');
 INSERT INTO tbl_user(u_id,u_pw,u_nick,u_mail)
 VALUES('korea3','12345','최길동','abc3@gmail.com');
 
+INSERT INTO tbl_user(u_id,u_pw,u_nick,u_mail)
+VALUES('korea4','12345','이길동','abc4@gmail.com');
+
 CREATE TABLE tbl_userProf (
 	prof_seq	BIGINT	AUTO_INCREMENT	PRIMARY KEY,
 	prof_url	VARCHAR(300)		
