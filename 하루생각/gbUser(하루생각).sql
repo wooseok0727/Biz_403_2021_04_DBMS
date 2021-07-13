@@ -39,8 +39,8 @@ CREATE TABLE tbl_writing (
 	wr_user				BIGINT	NOT NULL,	
 	wr_nick				VARCHAR(50)	NOT NULL,	
 	wr_content			VARCHAR(3000)	NOT NULL,	
-	wr_like_count		INT,		
-	wr_warning_count	INT,	
+	wr_like_count		INT DEFAULT 0,		
+	wr_warning_count	INT DEFAULT 0,	
 	wr_write_date		TIMESTAMP DEFAULT NOW(),	
 	wr_last_date		TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,	
 	wr_origin			VARCHAR(50)		
@@ -70,6 +70,9 @@ FROM tbl_writing
 
 INSERT INTO tbl_like (li_wr_seq,li_fan)
 VALUES(8,2);
+
+INSERT INTO tbl_writing (wr_user,wr_nick,wr_content,wr_origin)
+VALUES(17,'ccc','헬로우','출처');
 
 SELECT * FROM tbl_writing;
 SELECT * FROM tbl_user;

@@ -109,9 +109,7 @@ FROM tbl_gallery G
 		ON G.g_seq = F.file_gseq
 	WHERE G.g_seq = 3;
 
-DELETE FROM tbl_files
-WHERE file_seq = 7;
-
+DROP TABLE tbl_files;
 
 
 DROP VIEW view_갤러리;
@@ -122,3 +120,4 @@ SELECT * FROM view_갤러리;
 SELECT * FROM tbl_member
 WHERE m_userid = 'crash2@naver.com';
 
+SELECT * FROM tbl_files;
