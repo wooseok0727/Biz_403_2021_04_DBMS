@@ -1,0 +1,7 @@
+유저번호,유저아이디,비밀번호,유저닉네임,이메일,레벨
+2,korea2,123,홍길동,korea2@naver.com,6
+5,korea5,123,박길동,korea3@naver.com,6
+6,korea6,123,김길동,korea4@naver.com,6
+7,korea7,123,박문수,korea5@naver.com,6
+9,korea9,123,최길동,korea6@naver.com,9
+0,admin,123,관리자,korea7@naver.com,0

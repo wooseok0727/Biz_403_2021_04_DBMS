@@ -4,7 +4,7 @@ use amind;
 
 CREATE TABLE tbl_user (
 	u_seq	BIGINT			auto_increment	PRIMARY KEY,
-	u_prof	BIGINT,		
+	u_prof	BIGINT 			UNIQUE,		
 	u_id	VARCHAR(125)	NOT NULL	UNIQUE,
 	u_pw	VARCHAR(125)	NOT NULL,	
 	u_nick	VARCHAR(125)	NOT NULL	UNIQUE,
@@ -61,8 +61,8 @@ DROP TABLE tbl_user;
 DROP TABLE tbl_userProf;
 
 
-ALTER TABLE tbl_userprof
-ADD CONSTRAINT fk_user_prof
+ALTER TABLE tbl_userProf
+ADD CONSTRAINT fk_prof
 FOREIGN KEY (prof_seq)
 REFERENCES tbl_user(u_prof)
 ON DELETE CASCADE;
