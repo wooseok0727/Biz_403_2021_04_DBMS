@@ -87,7 +87,8 @@ REFERENCES tbl_user(u_seq);
 ALTER TABLE tbl_like
 ADD CONSTRAINT fk_li_writing
 FOREIGN KEY(li_wr_seq)
-REFERENCES tbl_writing(wr_seq);
+REFERENCES tbl_writing(wr_seq)
+ON DELETE CASCADE;
 
 ALTER TABLE tbl_like
 ADD CONSTRAINT fk_li_user
