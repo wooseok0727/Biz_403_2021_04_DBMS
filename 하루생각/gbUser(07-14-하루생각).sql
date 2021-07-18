@@ -95,3 +95,6 @@ ADD CONSTRAINT fk_li_user
 FOREIGN KEY(li_fan)
 REFERENCES tbl_user(u_seq)
 ON DELETE CASCADE;
+
+ALTER TABLE tbl_warning
+ADD COLUMN wa_reporter BIGINT NOT NULL;
