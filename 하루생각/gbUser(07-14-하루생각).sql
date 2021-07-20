@@ -82,7 +82,8 @@ ON DELETE CASCADE;
 ALTER TABLE tbl_warning
 ADD CONSTRAINT fk_wa_user
 FOREIGN KEY(wa_user)
-REFERENCES tbl_user(u_seq);
+REFERENCES tbl_user(u_seq)
+ON DELETE CASCADE;
 
 ALTER TABLE tbl_like
 ADD CONSTRAINT fk_li_writing
